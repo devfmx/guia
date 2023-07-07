@@ -1,0 +1,171 @@
+/* psedo elemento aqui vamos a definir variables */
+:root{
+  --cyan: #4ABEBD;
+  --cyan-dark: #29AFAD;
+  --bright: hsl(71, 73%, 54%);  
+  --light-ray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html{
+  /* accecibilidad */
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: var(--light-ray);
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+}
+
+h3, h2 {
+  color: var(--light-ray)
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* em, rem */
+.container-body, .container-header {
+  width: 43.75rem;
+}
+
+.container-header{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.container-body {
+  display: flex;
+  justify-content: center;
+}
+
+.login-subscription {
+  background-color: var(--cyan-dark);
+  width: 100%;  
+  padding: 10px;
+  border-radius: 0 0 0 10px;
+  padding-bottom: 30px;
+}
+
+.login-subscription p, h2 {
+  margin: 0;
+  color: var(--light-ray);
+}
+
+.login-subscription-info {
+  padding: 16px;
+}
+
+.form-container {
+  background-color: var(--cyan);
+  width: 100%;
+  padding: 10px;
+  border-radius: 0 0 10px 0;
+}
+
+.btn-login {
+  width: 200px;
+  background-color: var(--bright);
+  color: #fff;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 4px;
+}
+
+.btn-login:hover {
+  opacity: 0.9;
+}
+
+.btn-login:active {
+  transform: translateY(2px);
+}
+
+small {
+  color: var(--cyan);
+}
+
+h1 {
+  color: var(--cyan-dark);
+}
+
+.container-header p {
+  color: var(--bright);
+  font-weight: bold;
+}
+
+.container-header :last-child {
+  color: var(--grayish-blue);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-form {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--light-ray);
+  margin-bottom: 10px;
+}
+
+label {
+  color: var(--light-ray);
+}
+
+textarea {
+  font-family: 'Karla', sans-serif;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+
+  .container {
+    padding: 10px;
+  }
+
+  .container-body, .container-header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 478px) {
+  .container-body {
+    flex-direction: column;
+  }
+
+  .login-subscription {
+    display: none;
+    /* visibility: hidden; */
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    padding: 10px;
+  }
+}
